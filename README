@@ -1,0 +1,33 @@
+Project: Spectral method for Permutation synchronization
+Author: Hy Truong Son
+Email: hytruongson@uchicago.edu
+Institution: University of Chicago
+
+
+Reference
+---------
+[1] Near-Optimal Performance Bounds for Orthogonal and Permutation Group Synchronization via Spectral Methods, https://arxiv.org/abs/2008.05341
+[2] Solving the multi-way matching problem by permutation synchronization, https://papers.nips.cc/paper/4987-solving-the-multi-way-matching-problem-by-permutation-synchronization
+
+
+Hungarian library compilation
+-----------------------------
+$ cd hungarian_lib
+$ sh compile.sh
+
+Note: You need PyTorch installed. The Hungarian library is implemented by Maximum Flow Minimum Cost algorithm instead of the Kuhn-Munkres algorithm
+
+
+Run the Hungarian matching example
+----------------------------------
+$ python3 test_hungarian.py
+
+
+Run the permutation synchronization example
+-------------------------------------------
+$ python3 test_rotation.py
+
+Note:
+- The dataset is rotated images of mathematician James Simons
+- Random landmarks are selected. At each landmark, we extract the feature (Red, Green, Blue) that is the average of pixels in a square window around the landmark
+- The baseline is Hungarian matching (implemented by Maximum Flow Minimum Cost, instead of Kuhn-Munkres algorithm)
