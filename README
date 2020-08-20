@@ -31,3 +31,8 @@ Note:
 - The dataset is rotated images of mathematician James Simons
 - Random landmarks are selected. At each landmark, we extract the feature (Red, Green, Blue) that is the average of pixels in a square window around the landmark
 - The baseline is Hungarian matching (implemented by Maximum Flow Minimum Cost, instead of Kuhn-Munkres algorithm)
+
+
+Run Birkhoff - von Neumann decomposition (Birkhoff's algorithm)
+---------------------------------------------------------------
+$ python3 test_birkhoff.py
